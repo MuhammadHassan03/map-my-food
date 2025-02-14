@@ -22,12 +22,12 @@ function FAQ() {
         <Grid item xs={1} md={1} />
         <Grid container item xs={10} sm={10} md={9}>
           <Typography variant="h4" className={classes.FAQTitle}>
-            Order food online from the best restaurants and shops on Enatega
+            Order food online from the best restaurants and shops on Map My Food
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            Are you hungry? Had a long and busy day? Then Enatega is the right place for you! Enatega, offers you a long
+            Are you hungry? Had a long and busy day? Then Map My Food is the right place for you! Map My Food, offers you a long
             and detailed <b>list of the best restaurants near you</b>. Whether it is a delicious Pizza, Burger, Japanese
-            or any kind of Fast Food you are craving, Enatega has an extensive roaster restaurants available for you to{" "}
+            or any kind of Fast Food you are craving, Map My Food has an extensive roaster restaurants available for you to{" "}
             <b>order food online with home delivery</b>.
           </Typography>
           <Typography variant="h4" className={classes.FAQTitle}>
@@ -57,7 +57,7 @@ function FAQ() {
                 <ListItemIcon>
                   <DoneIcon color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="NEW: Enatega grocery delivery! Discover the best shops, pharmacies, bakeries and more near you." />
+                <ListItemText primary="NEW: Map My Food grocery delivery! Discover the best shops, pharmacies, bakeries and more near you." />
               </ListItem>
             </List>
           </Grid>
@@ -65,10 +65,10 @@ function FAQ() {
             Frequently Asked Questions
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            How can I get enatega delivery?
+            How can I get Map My Food delivery?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            To get enatega delivery, simply locate the restaurants near you by typing in your address, browse through a
+            To get Map My Food delivery, simply locate the restaurants near you by typing in your address, browse through a
             variety of restaurants and cuisines, check menus and prices, choose your dishes and add them to the basket.
             Now you only need to checkout and make the payment. Soon your delicious food will arrive at your doorstep!
           </Typography>
@@ -89,37 +89,37 @@ function FAQ() {
             </p>
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            Does enatega deliver 24 hours?
+            Does Map My Food deliver 24 hours?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            Yes, enatega in Pakistan delivers 24 hours. However, many restaurants may be unavailable for a late night
+            Yes, Map My Food in Pakistan delivers 24 hours. However, many restaurants may be unavailable for a late night
             delivery. Please check which places in Pakistan deliver to you 24 hours by using your address.
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            Can you pay cash for enatega?
+            Can you pay cash for Map My Food?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            Yes, you can pay cash on delivery for enatega in Pakistan.
+            Yes, you can pay cash on delivery for Map My Food in Pakistan.
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            How can I pay enatega online?
+            How can I pay Map My Food online?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            You can pay online while ordering at enatega Pakistan by using a credit or debit card or PayPal.
+            You can pay online while ordering at Map My Food Pakistan by using a credit or debit card or PayPal.
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            Can I order enatega for someone else?
+            Can I order Map My Food for someone else?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            Yes, enatega Pakistan allows you to place an order for someone else. During checkout, just update the name
+            Yes, Map My Food Pakistan allows you to place an order for someone else. During checkout, just update the name
             and delivery address of the person you're ordering for. Please keep in mind that if the delivery details are
             not correct and the order cannot be delivered, we won't be able to process a refund.
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            How much does enatega charge for delivery?
+            How much does Map My Food charge for delivery?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            Delivery fee charged by enatega in Pakistan depends on many operational factors, most of all - location and
+            Delivery fee charged by Map My Food in Pakistan depends on many operational factors, most of all - location and
             a restaurant you are ordering from. You can always check the delivery fee while forming your order. Besides,
             you can filter the restaurants by clicking on "Free Delivery" icon on the top of your restaurants listing.
           </Typography>
@@ -127,7 +127,7 @@ function FAQ() {
             What restaurants let you order online?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            There are hundreds of restaurants on enatega Pakistan that let you order online. For example, KFC,
+            There are hundreds of restaurants on Map My Food Pakistan that let you order online. For example, KFC,
             McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the
             restaurants near you that deliver, just type in your address and discover all the available places.
           </Typography>
@@ -135,12 +135,12 @@ function FAQ() {
             What restaurants let you order online?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            There are hundreds of restaurants on enatega Pakistan that let you order online. For example, KFC,
+            There are hundreds of restaurants on Map My Food Pakistan that let you order online. For example, KFC,
             McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the
             restaurants near you that deliver, just type in your address and discover all the available places.
           </Typography>
           <Typography variant="h6" className={classes.FAQTitle}>
-            Does enatega have minimum order?
+            Does Map My Food have minimum order?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
             Yes, many restaurants have a minimum order. The minimum order value depends on the restaurant you order from

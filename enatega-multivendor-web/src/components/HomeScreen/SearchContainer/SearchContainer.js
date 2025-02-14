@@ -162,7 +162,7 @@ function SearchContainer({
           handleClose={handleClose}
         />
         <Grid className={classes.temp}>
-          
+
           {map && (
             <GoogleMap
               mapContainerStyle={{
@@ -251,10 +251,10 @@ function SearchContainer({
                           loading
                             ? "Loading ..."
                             : search
-                            ? search
-                            : location
-                            ? location.deliveryAddress
-                            : ""
+                              ? search
+                              : location
+                                ? location.deliveryAddress
+                                : ""
                         }
                         onChange={(event, newValue) => {
                           if (newValue) {
@@ -426,7 +426,7 @@ function SearchContainer({
             sm={15}
             md={10}
             lg={7}
-            style={{ marginBottom: "8%" }}
+            style={{ marginBottom: "8%", gap: 10 }}
           >
             <Grid container item xs={12} className={classes.searchContainer}>
               <Grid item xs={12} sm={isHome ? 9 : 12}>
@@ -445,10 +445,10 @@ function SearchContainer({
                       loading
                         ? "Loading ..."
                         : search
-                        ? search
-                        : location
-                        ? location.deliveryAddress
-                        : ""
+                          ? search
+                          : location
+                            ? location.deliveryAddress
+                            : ""
                     }
                     onChange={(event, newValue) => {
                       if (newValue) {
@@ -482,11 +482,13 @@ function SearchContainer({
                         }}
                         variant="outlined"
                         placeholder="Enter your full address"
-                        onKeyPress={(event) => { if(event.key === 'Enter'){
-                          if (location) {
-                            navigateTo("/restaurant-list");
+                        onKeyPress={(event) => {
+                          if (event.key === 'Enter') {
+                            if (location) {
+                              navigateTo("/restaurant-list");
+                            }
                           }
-                         } }}
+                        }}
                         InputLabelProps={{ style: { display: "none" } }}
                         fullWidth
                         InputProps={{
@@ -582,7 +584,183 @@ function SearchContainer({
                   xs={12}
                   sm={3}
                   style={{ paddingLeft: "10px", textAlign: "center" }}
-                  
+
+                >
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                    disableElevation
+                    className={classes.button}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (location) {
+                        navigateTo("/restaurant-list");
+                      }
+                    }}
+                  >
+                    {t("findRestaurants")}
+                  </Button>
+                </Grid>
+              ) : null}
+            </Grid>
+            <Grid container item xs={12} className={classes.searchContainer}>
+              <Grid item xs={12} sm={isHome ? 9 : 12}>
+                {isHome ? (
+                  <Autocomplete
+                    id="google-map-demo"
+                    getOptionLabel={(option) =>
+                      typeof option === "string" ? option : option.description
+                    }
+                    filterOptions={(x) => x}
+                    options={options}
+                    autoComplete
+                    includeInputInList
+                    filterSelectedOptions
+                    value={
+                      loading
+                        ? "Loading ..."
+                        : search
+                          ? search
+                          : location
+                            ? location.deliveryAddress
+                            : ""
+                    }
+                    onChange={(event, newValue) => {
+                      if (newValue) {
+                        const b = new window.google.maps.Geocoder();
+                        b.geocode({ placeId: newValue.place_id }, (res) => {
+                          const location = res[0].geometry.location;
+                          setLocation({
+                            label: "Home",
+                            deliveryAddress: newValue.description,
+                            latitude: location.lat(),
+                            longitude: location.lng(),
+                          });
+                        });
+                      } else {
+                        setSearch("");
+                      }
+                      setOptions(newValue ? [...options] : options);
+                      setValue(newValue);
+                    }}
+                    onInputChange={(event, newInputValue) => {
+                      setInputValue(newInputValue);
+                    }}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        style={{
+                          color: "initial",
+                          backgroundColor: theme.palette.common.white,
+                          borderRadius: 10,
+                          border: "none",
+                        }}
+                        variant="outlined"
+                        placeholder="Enter your full address"
+                        onKeyPress={(event) => {
+                          if (event.key === 'Enter') {
+                            if (location) {
+                              navigateTo("/restaurant-list");
+                            }
+                          }
+                        }}
+                        InputLabelProps={{ style: { display: "none" } }}
+                        fullWidth
+                        InputProps={{
+                          ...params.InputProps,
+                          endAdornment: (
+                            <>
+                              {params.InputProps.endAdornment}
+                              <InputAdornment
+                                position="end"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setValue(search?.deliveryAddress ?? "");
+                                  setSearch(location?.deliveryAddress ?? "");
+                                }}
+                              >
+                                {loading ? (
+                                  <SyncLoader
+                                    color={theme.palette.primary.main}
+                                    size={5}
+                                    speedMultiplier={0.7}
+                                    margin={1}
+                                  />
+                                ) : (
+                                  <LocationIcon
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      setLoading(true);
+                                      getCurrentLocation(locationCallback);
+                                    }}
+                                  />
+                                )}
+                              </InputAdornment>
+                            </>
+                          ),
+                        }}
+                      />
+                    )}
+                    renderOption={(props, option) => {
+                      const matches =
+                        option.structured_formatting
+                          ?.main_text_matched_substrings;
+                      let parts = null;
+                      if (matches) {
+                        parts = parse(
+                          option.structured_formatting.main_text,
+                          matches.map((match) => [
+                            match.offset,
+                            match.offset + match.length,
+                          ])
+                        );
+                      }
+                      return (
+                        <Grid {...props} container alignItems="center">
+                          <Grid item>
+                            <LocationOnIcon className={classes.icon} />
+                          </Grid>
+                          <Grid item xs>
+                            {parts &&
+                              parts.map((part, index) => (
+                                <span
+                                  key={index}
+                                  style={{
+                                    fontWeight: part.highlight ? 700 : 400,
+                                    color: "black",
+                                  }}
+                                >
+                                  {part.text}
+                                </span>
+                              ))}
+
+                            <Typography variant="body2" color="textSecondary">
+                              {option.structured_formatting?.secondary_text}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      );
+                    }}
+                  />
+                ) : (
+                  <Grid>
+                    <Grid>
+                      <SearchRestaurant
+                        search={searchProp}
+                        setSearch={setSearchProp}
+                      />
+                    </Grid>
+                  </Grid>
+                )}
+              </Grid>
+              {isHome ? (
+                <Grid
+                  item
+                  xs={12}
+                  sm={3}
+                  style={{ paddingLeft: "10px", textAlign: "center" }}
+
                 >
                   <Button
                     variant="contained"

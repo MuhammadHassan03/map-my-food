@@ -186,7 +186,7 @@ function Home() {
                     />
                   </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                {/* <Grid item xs={12} md={6}>
                   <Box mt={small ? 15 : 0} />
 
                   <CategoryCards
@@ -200,8 +200,8 @@ function Home() {
                     link={"https://multivendor-admin.enatega.com/"}
                     isMobile={false}
                   />
-                </Grid>
-                <Grid item xs={12} md={6}>
+                </Grid> */}
+                {/* <Grid item xs={12} md={6}>
                   <Box mt={small ? 15 : 0} />
                   <Box display="flex" justifyContent="flex-end">
                     <CategoryCards
@@ -216,7 +216,7 @@ function Home() {
                       isMobile={false}
                     />
                   </Box>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Container>
           </Box>

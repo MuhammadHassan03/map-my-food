@@ -62,7 +62,7 @@ function Footer() {
             }}
             align="center"
           >
-            Enatega
+            Map My Food
           </Typography>
           <Typography
             variant="body2"

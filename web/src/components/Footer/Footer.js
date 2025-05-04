@@ -61,7 +61,7 @@ function Footer() {
             }}
             align="center"
           >
-            {t("Enatega")}
+            Map My Food
           </Typography>
           <Typography
             variant="body2"

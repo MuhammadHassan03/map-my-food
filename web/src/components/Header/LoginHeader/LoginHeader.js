@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import LoginDesktopHeader from "./DesktopHeader";
 
-const TITLE = "MAP MY FOOD";
+const TITLE = "Map My Food";
 
 const REGISTRATION_PATH = [
   "/login",

@@ -5,7 +5,7 @@ import DHeader from "./desktop.header";
 import Analytics from "../../utils/analytics";
 import { useTranslation } from '../../../node_modules/react-i18next';
 
-const TITLE = "MAP MY FOOD";
+const TITLE = "Map My Food";
 const NAME = "...";
 /*const NAVITEMS = [
   {

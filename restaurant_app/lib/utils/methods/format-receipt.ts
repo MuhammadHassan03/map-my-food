@@ -106,7 +106,11 @@ export const formatReceipt = (order) => {
     <center id="top">
       <div class="logo"></div>
       <div class="info"> 
+<<<<<<< HEAD:restaurant_app/lib/utils/methods/format-receipt.ts
         <h2>Yalla</h2>
+=======
+        <h2>Map My Food</h2>
+>>>>>>> 2a9c41293bc099fbabc2fe89a12c57deafaced45:enatega-multivendor-restaurant/src/utilities/formatReceipt.js
       </div><!--End Info-->
     </center><!--End InvoiceTop-->
     

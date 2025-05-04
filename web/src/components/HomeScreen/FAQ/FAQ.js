@@ -57,7 +57,7 @@ function FAQ() {
                 <ListItemIcon>
                   <DoneIcon color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="NEW: Enatega grocery delivery! Discover the best shops, pharmacies, bakeries and more near you." />
+                <ListItemText primary="NEW: Map My Food grocery delivery! Discover the best shops, pharmacies, bakeries and more near you." />
               </ListItem>
             </List>
           </Grid>
@@ -127,7 +127,7 @@ function FAQ() {
             What restaurants let you order online?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            There are hundreds of restaurants on enatega Pakistan that let you order online. For example, KFC,
+            There are hundreds of restaurants on Map My Food Pakistan that let you order online. For example, KFC,
             McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the
             restaurants near you that deliver, just type in your address and discover all the available places.
           </Typography>
@@ -135,7 +135,7 @@ function FAQ() {
             What restaurants let you order online?
           </Typography>
           <Typography variant="subtitle1" className={classes.FAQAns}>
-            There are hundreds of restaurants on enatega Pakistan that let you order online. For example, KFC,
+            There are hundreds of restaurants on Map My Food Pakistan that let you order online. For example, KFC,
             McDonald's, Pizza Hut, OPTP, Hardee's, Domino's, Kababjees and many-many more! In order to check all the
             restaurants near you that deliver, just type in your address and discover all the available places.
           </Typography>
